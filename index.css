@@ -1,0 +1,47 @@
+#background-cover {
+    background-image: url("image/manhattan.jpg");
+    max-width: 100%;
+    height: 450px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    object-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#title-container {
+    color: whitesmoke;
+    text-align: center;
+}
+
+#page-title {
+    font-size: 100px;
+    font-family: cursive;
+    margin-top: 0;
+}
+
+.title-buttons {
+    margin: 16px;
+}
+
+section {
+    background-color: yellow;
+    width: 70%;
+    margin: 16px;
+
+}
+
+.description {
+    color: blue
+}
+
+.read-more {
+    color: lightskyblue
+}
+
+nav {
+    display: inline-block margin-left:0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
