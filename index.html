@@ -10,24 +10,32 @@
     <h1 id="title">
         Title
     </h1>
-    <p>Price:</p>
-    <input id="amount" type="number" value="20" />
-    <button type="button" onclick="clickMe();">
-        Click Here
-    </button>
+    <table border="1" style="width: 600px" ; margin: 32px 0 32px 0;>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Delete Button</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+        <button type="button" onclick="clickMe();">
+            Click Me
+        </button>
 </body>
 <script>
+    var numberCounter = 0
     var clickMe = function() {
-        var input = document.getElementById("amount");
-        var amount = Number(input.value);
-        if (isNaN(amount)) {
-            alert("Error!!!Please input number!")
-        } else {
-            
-            var tax = 5;
-            var totle = amount + tax;
-            alert(totle);
-        }
+        var tbody = document.getElementById("tbody");
+        tbody.innerHTML = tbody.innerHTML + "<tr id='" + "tr_" + numberCounter + "'><td>" + numberCounter + "</td><td><button type='button' onclick='deleteRow(this);' data-row-id='" + numberCounter + "'>Delete</button></td></tr>";
+
+        numberCounter++;
+    }
+    var deleteRow = function(event) {
+        var number = event.getAttribute("data-row-id");
+        var id = "tr_" + number;
+        var tr = document.getElementById(id);
+        tr.outerHTML = "";
     }
 
 </script>
